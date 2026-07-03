@@ -4,45 +4,45 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Brand green — pulled from the shop's visiting card, laddered so
-        // buttons/gradients/dark sections all draw from one scale.
-        brand: {
-          50: '#e6f5ec',
-          100: '#c6e9d3',
-          500: '#0c8a46',
-          600: '#0a6e38',
-          700: '#084f29',
-          900: '#06331b',
+        // Warm paper base — the whole site sits on this, not pure white,
+        // so the black ink and colour blocks read as printed, not digital.
+        paper: {
+          DEFAULT: '#f3efe4',
+          deep: '#e9e2d1',
         },
-        // Near-black greens for footer / guarantee band.
+        // Warm near-black — every border, shadow and body text.
         ink: {
-          950: '#0a1811',
-          900: '#0d1f16',
-          700: '#1a2b21',
+          DEFAULT: '#17140d',
+          soft: '#3a352b',
         },
-        gold: {
-          DEFAULT: '#ffc82c',
-          soft: '#fff4d6',
+        // Brand green (visiting card) — the primary action colour.
+        green: {
+          DEFAULT: '#0c8a46',
+          deep: '#0a6e38',
+          bright: '#16b45f',
         },
-        whatsapp: {
-          DEFAULT: '#1fb658',
-          deep: '#17954a',
+        // Brand yellow — highlights, badges, one hero block.
+        yellow: {
+          DEFAULT: '#ffce34',
+          deep: '#f2b705',
         },
-        paper: '#f6f9f7',
-        muted: '#51665b',
-        faint: '#7d8f85',
-        line: '#e2e9e4',
+        whatsapp: '#1fb658',
+        red: '#e0503a',
+        muted: '#6b6459',
       },
       fontFamily: {
-        display: ['Manrope', 'system-ui', 'sans-serif'],
+        // Space Grotesk reads engineered/technical — right for a repair
+        // workshop. Space Mono carries the "job ticket" labels.
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        mono: ['"Space Mono"', 'ui-monospace', 'monospace'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        card: '0 1px 3px rgba(13,31,22,0.07), 0 4px 14px -6px rgba(13,31,22,0.08)',
-        pop: '0 6px 24px -8px rgba(13,31,22,0.16)',
-        float: '0 20px 50px -20px rgba(13,31,22,0.28)',
-        cta: '0 8px 24px -8px rgba(12,138,70,0.55)',
-        wa: '0 8px 24px -8px rgba(31,182,88,0.55)',
+        // Hard offset shadows — the signature of the whole look. No blur.
+        hard: '4px 4px 0 0 #17140d',
+        'hard-sm': '3px 3px 0 0 #17140d',
+        'hard-lg': '7px 7px 0 0 #17140d',
+        'hard-paper': '4px 4px 0 0 #f3efe4',
       },
       keyframes: {
         marquee: {
@@ -51,7 +51,7 @@ export default {
         },
       },
       animation: {
-        marquee: 'marquee 32s linear infinite',
+        marquee: 'marquee 30s linear infinite',
       },
     },
   },

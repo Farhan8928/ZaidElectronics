@@ -5,76 +5,91 @@ import { SERVICES } from '../data/services.js'
 
 export default function Footer() {
   return (
-    <footer className="bg-ink-950 pt-16 text-[#d7e5dc]">
-      <div className="container-x grid gap-10 pb-12 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr_1.3fr]">
+    <footer className="border-t-2 border-ink bg-ink text-paper">
+      <div className="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.5fr_0.8fr_1fr_1.2fr]">
         <div>
-          <Brand subtleSub />
-          <p className="mt-4 max-w-[34ch] text-[0.9rem] text-white/60">
-            LED &amp; LCD TV repair, panel repair &amp; bonding, smart TV service, buying
-            &amp; selling — serving Mumbai with honest, expert repairs since {CONTACT.since}.
+          <Brand onDark />
+          <p className="mt-4 max-w-[34ch] text-[0.9rem] text-paper/60">
+            LED &amp; LCD TV repair, panel repair &amp; bonding, smart-TV service, buying &amp;
+            selling — serving Mumbai with honest, expert repairs since {CONTACT.since}.
           </p>
         </div>
 
-        <nav className="flex flex-col gap-2.5" aria-label="Footer navigation">
-          <h4 className="mb-1 text-[0.82rem] font-bold uppercase tracking-[0.1em] text-gold">
-            Quick Links
-          </h4>
+        <FooterCol title="Index">
           {NAV_LINKS.map((l) => (
-            <a key={l.href} href={l.href} className="w-fit text-[0.9rem] text-white/65 hover:text-white">
+            <FooterLink key={l.href} href={l.href}>
               {l.label}
-            </a>
+            </FooterLink>
           ))}
-        </nav>
+        </FooterCol>
 
-        <div className="flex flex-col gap-2.5">
-          <h4 className="mb-1 text-[0.82rem] font-bold uppercase tracking-[0.1em] text-gold">
-            Services
-          </h4>
+        <FooterCol title="Services">
           {SERVICES.map((s) => (
-            <a key={s.title} href="#services" className="w-fit text-[0.9rem] text-white/65 hover:text-white">
+            <FooterLink key={s.title} href="#services">
               {s.title}
-            </a>
+            </FooterLink>
           ))}
-        </div>
+        </FooterCol>
 
-        <div className="flex flex-col gap-2.5">
-          <h4 className="mb-1 text-[0.82rem] font-bold uppercase tracking-[0.1em] text-gold">
-            Contact
-          </h4>
-          <FooterLine icon={Phone}>
-            <a href={`tel:+91${CONTACT.phones[0]}`} className="hover:text-white">
+        <FooterCol title="Reach us">
+          <FooterMeta icon={Phone}>
+            <a href={`tel:+91${CONTACT.phones[0]}`} className="hover:text-yellow">
               {fmtPhone(CONTACT.phones[0])}
             </a>
-          </FooterLine>
-          <FooterLine icon={Phone}>
-            <a href={`tel:+91${CONTACT.phones[1]}`} className="hover:text-white">
+          </FooterMeta>
+          <FooterMeta icon={Phone}>
+            <a href={`tel:+91${CONTACT.phones[1]}`} className="hover:text-yellow">
               {fmtPhone(CONTACT.phones[1])}
             </a>
-          </FooterLine>
-          <FooterLine icon={Mail}>
-            <a href={`mailto:${CONTACT.emails[0]}`} className="hover:text-white">
+          </FooterMeta>
+          <FooterMeta icon={Mail}>
+            <a href={`mailto:${CONTACT.emails[0]}`} className="hover:text-yellow">
               {CONTACT.emails[0]}
             </a>
-          </FooterLine>
-          <FooterLine icon={MapPin}>{CONTACT.address}</FooterLine>
-          <FooterLine icon={Clock}>{CONTACT.hours}</FooterLine>
-        </div>
+          </FooterMeta>
+          <FooterMeta icon={MapPin}>{CONTACT.address}</FooterMeta>
+          <FooterMeta icon={Clock}>{CONTACT.hours}</FooterMeta>
+        </FooterCol>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="container-x flex flex-wrap items-center justify-between gap-2 py-5 text-[0.8rem] text-white/45">
-          <span>© {new Date().getFullYear()} Zaid Electronics. All rights reserved.</span>
-          <span>Prop. {CONTACT.proprietor} · Free diagnosis · 90-day written warranty</span>
-        </div>
+      {/* Oversized wordmark strip */}
+      <div className="overflow-hidden border-y-2 border-paper/15">
+        <p className="select-none whitespace-nowrap py-4 text-center font-display text-[13vw] font-bold uppercase leading-none tracking-tighter text-paper/[0.06]">
+          Zaid Electronics · TV Repair Mumbai
+        </p>
+      </div>
+
+      <div className="container-x flex flex-wrap items-center justify-between gap-2 py-5 font-mono text-[0.66rem] uppercase tracking-[0.1em] text-paper/45">
+        <span>© {new Date().getFullYear()} Zaid Electronics · All rights reserved</span>
+        <span>Prop. {CONTACT.proprietor} · Free diagnosis · 90-day warranty</span>
       </div>
     </footer>
   )
 }
 
-function FooterLine({ icon: Icon, children }) {
+function FooterCol({ title, children }) {
   return (
-    <p className="flex items-start gap-2 text-[0.88rem] text-white/65">
-      <Icon size={15} className="mt-0.5 shrink-0 text-gold" />
+    <div className="flex flex-col gap-2.5">
+      <h4 className="mb-1 font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-yellow">
+        {title}
+      </h4>
+      {children}
+    </div>
+  )
+}
+
+function FooterLink({ href, children }) {
+  return (
+    <a href={href} className="w-fit text-[0.9rem] text-paper/65 hover:text-yellow">
+      {children}
+    </a>
+  )
+}
+
+function FooterMeta({ icon: Icon, children }) {
+  return (
+    <p className="flex items-start gap-2 text-[0.88rem] text-paper/65">
+      <Icon size={15} className="mt-0.5 shrink-0 text-yellow" />
       <span>{children}</span>
     </p>
   )

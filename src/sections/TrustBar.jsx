@@ -1,47 +1,55 @@
-import { Star } from 'lucide-react'
 import { BRANDS, RATING } from '../data/site.js'
 
 const STATS = [
-  { value: RATING.score, star: true, label: `${RATING.count} happy customers` },
-  { value: RATING.repairs, label: 'TVs repaired since 2009' },
-  { value: RATING.years, label: 'years of experience' },
-  { value: '90-day', label: 'written warranty' },
+  { value: RATING.score, suffix: '★', label: 'Customer rating' },
+  { value: RATING.repairs, label: 'TVs repaired' },
+  { value: RATING.years, label: 'Years at the bench' },
+  { value: '90d', label: 'Written warranty' },
 ]
 
 /**
- * Proof strip directly under the hero — headline metrics + the full brand
- * list. Placed high on purpose: a visitor deciding whether to trust an
- * unknown local shop wants numbers and "do they handle my brand?" answered
- * before they read any marketing copy.
+ * Proof band directly under the hero: headline metrics on an ink block, then
+ * an auto-scrolling brand marquee. Placed high because an unknown local shop
+ * has to answer "can I trust them / do they handle my brand?" before any
+ * marketing copy earns attention.
  */
 export default function TrustBar() {
+  const row = [...BRANDS, ...BRANDS]
   return (
-    <section className="border-y border-line bg-white py-7" aria-label="Trust and brands">
-      <div className="container-x flex flex-col gap-5">
-        <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+    <section aria-label="Trust and brands">
+      {/* Metrics */}
+      <div className="border-b-2 border-ink bg-ink text-paper">
+        <div className="container-x grid grid-cols-2 md:grid-cols-4">
           {STATS.map((s, i) => (
             <div
               key={s.label}
-              className={`text-center ${i < STATS.length - 1 ? 'md:border-r md:border-line' : ''}`}
+              className={`px-4 py-6 text-center ${i > 0 ? 'border-l-2 border-paper/15' : ''} ${
+                i === 2 ? 'border-l-0 md:border-l-2' : ''
+              }`}
             >
-              <strong className="inline-flex items-center gap-1 font-display text-[1.7rem] font-extrabold text-brand-600">
+              <div className="font-display text-[2rem] font-bold leading-none">
                 {s.value}
-                {s.star && <Star size={15} className="fill-gold text-gold" />}
-              </strong>
-              <span className="block text-[0.8rem] text-muted">{s.label}</span>
+                {s.suffix && <span className="text-yellow">{s.suffix}</span>}
+              </div>
+              <div className="mt-2 font-mono text-[0.66rem] uppercase tracking-[0.1em] text-paper/60">
+                {s.label}
+              </div>
             </div>
           ))}
         </div>
+      </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-2 border-t border-dashed border-line pt-5">
-          <p className="text-[0.8rem] font-semibold text-muted">All brands repaired:</p>
-          <ul className="flex flex-wrap justify-center gap-1.5">
-            {BRANDS.map((b) => (
-              <li key={b} className="chip">
-                {b}
-              </li>
-            ))}
-          </ul>
+      {/* Brand marquee */}
+      <div className="overflow-hidden border-b-2 border-ink bg-yellow py-2.5">
+        <div className="flex w-max animate-marquee gap-8">
+          {row.map((b, i) => (
+            <span
+              key={`${b}-${i}`}
+              className="flex items-center gap-8 font-mono text-[0.8rem] font-bold uppercase tracking-[0.12em] text-ink"
+            >
+              {b} <span aria-hidden>✦</span>
+            </span>
+          ))}
         </div>
       </div>
     </section>

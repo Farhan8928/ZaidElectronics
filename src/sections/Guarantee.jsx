@@ -3,31 +3,30 @@ import Reveal, { SectionHeading } from '../components/Reveal.jsx'
 import { GUARANTEES } from '../data/services.js'
 
 /**
- * Dark "zero-risk" band.
- *
- * Deliberately the only dark section in the body — the tonal shift makes the
- * guarantees feel like a distinct promise block, and removing perceived risk
- * ("no fix, no fee") right before the contact section lowers the barrier to
- * calling.
+ * "Zero-risk" band on ink — the only fully dark section in the body. Removing
+ * perceived risk ("no fix, no fee") right before the contact block lowers the
+ * barrier to picking up the phone.
  */
 export default function Guarantee() {
   return (
-    <section
-      className="bg-[radial-gradient(700px_300px_at_50%_0%,rgba(255,200,44,0.12),transparent_70%),linear-gradient(160deg,theme(colors.brand.700),#06331b)] py-20 text-white"
-      aria-label="Our guarantees"
-    >
+    <section className="border-b-2 border-ink bg-ink py-16 text-paper md:py-24" aria-label="Our guarantees">
       <div className="container-x">
-        <SectionHeading eyebrow="Zero-Risk Promise" title="You Are Covered, In Writing" center invert />
+        <SectionHeading
+          num="05 / ZERO-RISK PROMISE"
+          eyebrow="Our promise"
+          title="You are covered, in writing"
+          invert
+        />
 
-        <div className="mx-auto mt-12 grid max-w-[560px] gap-6 lg:max-w-none lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
           {GUARANTEES.map((g, i) => (
-            <Reveal key={g.title} delay={i * 0.09}>
-              <div className="h-full rounded-3xl border border-white/15 bg-white/[0.06] p-8 text-center">
-                <span className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-gold text-ink-900">
-                  <ShieldCheck size={26} />
+            <Reveal key={g.title} delay={i * 0.08}>
+              <div className="flex h-full flex-col rounded-[6px] border-2 border-paper bg-ink-soft/40 p-6 shadow-hard-paper">
+                <span className="mb-4 grid h-12 w-12 place-items-center rounded-[6px] border-2 border-ink bg-yellow text-ink">
+                  <ShieldCheck size={24} />
                 </span>
-                <h3 className="mb-2 text-[1.12rem] font-extrabold">{g.title}</h3>
-                <p className="text-[0.9rem] text-white/75">{g.desc}</p>
+                <h3 className="mb-2 font-display text-[1.15rem] font-bold text-paper">{g.title}</h3>
+                <p className="text-[0.9rem] text-paper/70">{g.desc}</p>
               </div>
             </Reveal>
           ))}

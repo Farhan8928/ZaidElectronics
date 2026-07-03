@@ -1,23 +1,23 @@
-import { CheckCircle2, ArrowRight } from 'lucide-react'
+import { ArrowUpRight, Check } from 'lucide-react'
 import Reveal, { SectionHeading } from '../components/Reveal.jsx'
 import { SERVICES } from '../data/services.js'
 import { waLink } from '../data/site.js'
 
 export default function Services() {
   return (
-    <section id="services" className="py-16 md:py-24">
+    <section id="services" className="border-b-2 border-ink py-16 md:py-24">
       <div className="container-x">
         <SectionHeading
-          eyebrow="Our Services"
-          title="Every TV Problem, One Trusted Shop"
-          lead="Pick your problem — get a free diagnosis and a fixed price before any work starts."
-          center
+          num="01 / OUR SERVICES"
+          eyebrow="What we fix"
+          title="Every TV problem, one trusted workshop"
+          lead="Pick your fault — free diagnosis, one fixed price before any work starts."
         />
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((s, i) => (
-            <Reveal key={s.title} delay={(i % 3) * 0.08}>
-              <ServiceCard service={s} />
+            <Reveal key={s.title} delay={(i % 3) * 0.07}>
+              <ServiceBlock service={s} index={i + 1} />
             </Reveal>
           ))}
         </div>
@@ -26,45 +26,50 @@ export default function Services() {
   )
 }
 
-function ServiceCard({ service: s }) {
+function ServiceBlock({ service: s, index }) {
+  const no = String(index).padStart(2, '0')
   return (
-    <article
-      className={`card group relative flex h-full flex-col overflow-hidden transition duration-300 hover:-translate-y-1.5 hover:shadow-float ${
-        s.featured ? 'border-2 border-brand-500' : 'hover:border-brand-500/35'
+    <a
+      href={waLink(`Hi Zaid Electronics! I need: ${s.title}. Please send me a free quote.`)}
+      target="_blank"
+      rel="noreferrer"
+      className={`group flex h-full flex-col rounded-[6px] border-2 border-ink shadow-hard transition-all duration-150 hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none ${
+        s.featured ? 'bg-yellow' : 'bg-white'
       }`}
     >
-      {s.featured && (
-        <span className="absolute left-3.5 top-3.5 z-10 rounded-full bg-gold px-3 py-1 font-display text-[0.7rem] font-extrabold text-ink-900 shadow-card">
-          Most Popular — Save up to 70%
-        </span>
-      )}
-      <div className="aspect-[16/9] overflow-hidden">
+      <div className="relative aspect-[16/10] overflow-hidden border-b-2 border-ink">
         <img
           src={s.img}
           alt={s.alt}
           loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover grayscale-[35%] transition-all duration-500 group-hover:grayscale-0"
         />
+        <span className="absolute left-0 top-0 border-b-2 border-r-2 border-ink bg-ink px-2.5 py-1 font-mono text-[0.8rem] font-bold text-paper">
+          {no}
+        </span>
+        {s.featured && (
+          <span className="absolute right-3 top-3 rotate-3 rounded-[4px] border-2 border-ink bg-green px-2.5 py-1 font-mono text-[0.62rem] font-bold uppercase text-white shadow-hard-sm">
+            Save up to 70%
+          </span>
+        )}
       </div>
-      <div className="flex flex-grow flex-col p-6">
-        <h3 className="text-[1.22rem] font-extrabold">{s.title}</h3>
-        <p className="mt-2 flex-grow text-[0.92rem] text-muted">{s.desc}</p>
-        <ul className="my-4 grid gap-1.5">
+
+      <div className="flex flex-grow flex-col p-5">
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="font-display text-[1.2rem] font-bold text-ink">{s.title}</h3>
+          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-[4px] border-2 border-ink bg-paper text-ink transition group-hover:bg-green group-hover:text-white">
+            <ArrowUpRight size={16} />
+          </span>
+        </div>
+        <p className="mt-2 flex-grow text-[0.9rem] text-muted">{s.desc}</p>
+        <ul className="mt-4 flex flex-col gap-1.5 border-t-2 border-dashed border-ink/20 pt-3">
           {s.points.map((p) => (
-            <li key={p} className="flex items-center gap-2 text-[0.85rem] font-medium">
-              <CheckCircle2 size={16} className="shrink-0 text-brand-500" /> {p}
+            <li key={p} className="flex items-center gap-2 font-mono text-[0.72rem] font-bold uppercase tracking-[0.03em] text-ink">
+              <Check size={14} className="shrink-0 text-green" /> {p}
             </li>
           ))}
         </ul>
-        <a
-          className="inline-flex items-center gap-1.5 font-display text-[0.92rem] font-extrabold text-brand-600 transition-all hover:gap-2.5"
-          href={waLink(`Hi Zaid Electronics! I need: ${s.title}. Please send me a free quote.`)}
-          target="_blank"
-          rel="noreferrer"
-        >
-          Get free quote <ArrowRight size={16} />
-        </a>
       </div>
-    </article>
+    </a>
   )
 }

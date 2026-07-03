@@ -4,72 +4,69 @@ import { CONTACT, fmtPhone, waLink } from '../data/site.js'
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="bg-[linear-gradient(180deg,theme(colors.paper),#eef4f0_50%,theme(colors.paper))] py-16 md:py-24"
-    >
+    <section id="contact" className="border-b-2 border-ink py-16 md:py-24">
       <div className="container-x">
         <SectionHeading
-          eyebrow="Visit or Call"
-          title="Find Us in Mumbai"
-          lead="Walk in for a free check-up, or book a doorstep visit — 7 days a week."
-          center
+          num="07 / FIND US"
+          eyebrow="Visit or call"
+          title="Come to the workshop, or we come to you"
+          lead="Walk in for a free check-up, or book a doorstep visit — 7 days a week across Mumbai."
         />
 
         <div className="mt-12 grid items-stretch gap-6 lg:grid-cols-[0.95fr_1.05fr]">
           <Reveal>
-            <div className="card flex h-full flex-col p-7">
-              <div className="grid gap-5">
+            <div className="card flex h-full flex-col p-6">
+              <div className="grid gap-0 border-t-2 border-ink">
                 <Row icon={Phone} title="Call / WhatsApp">
                   {CONTACT.phones.map((p) => (
-                    <a key={p} href={`tel:+91${p}`} className="block hover:text-brand-600">
+                    <a key={p} href={`tel:+91${p}`} className="block hover:text-green">
                       {fmtPhone(p)}
                     </a>
                   ))}
                 </Row>
                 <Row icon={MapPin} title="Shop Address">
-                  <p>{CONTACT.address}</p>
+                  {CONTACT.address}
                 </Row>
                 <Row icon={Clock} title="Working Hours">
-                  <p>{CONTACT.hours}</p>
+                  {CONTACT.hours}
                 </Row>
-                <Row icon={Mail} title="Email">
+                <Row icon={Mail} title="Email" last>
                   {CONTACT.emails.map((e) => (
-                    <a key={e} href={`mailto:${e}`} className="block hover:text-brand-600">
+                    <a key={e} href={`mailto:${e}`} className="block hover:text-green">
                       {e}
                     </a>
                   ))}
                 </Row>
               </div>
 
-              <div className="mt-7 flex flex-wrap gap-3">
-                <a className="btn btn-primary btn-lg" href={`tel:+91${CONTACT.phones[0]}`}>
-                  <Phone size={17} /> Call Now
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a className="btn btn-green" href={`tel:+91${CONTACT.phones[0]}`}>
+                  <Phone size={16} /> Call Now
                 </a>
                 <a
-                  className="btn btn-wa btn-lg"
+                  className="btn btn-white"
                   href={waLink('Hi Zaid Electronics! I would like a free TV diagnosis.')}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <MessageCircle size={17} /> WhatsApp
+                  <MessageCircle size={16} /> WhatsApp
                 </a>
-                <a className="btn btn-outline btn-lg" href={CONTACT.directions} target="_blank" rel="noreferrer">
-                  <Navigation size={17} /> Directions
+                <a className="btn btn-white" href={CONTACT.directions} target="_blank" rel="noreferrer">
+                  <Navigation size={16} /> Directions
                 </a>
               </div>
             </div>
           </Reveal>
 
           <Reveal delay={0.12}>
-            <div className="card h-full min-h-[340px] overflow-hidden lg:min-h-[420px]">
+            <div className="card h-full min-h-[340px] overflow-hidden p-0 lg:min-h-[440px]">
               <iframe
                 title="Zaid Electronics location — Mumbai"
                 src={CONTACT.mapEmbed}
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                className="h-full w-full border-0"
+                className="h-full w-full border-0 grayscale-[20%]"
               />
             </div>
           </Reveal>
@@ -79,14 +76,16 @@ export default function Contact() {
   )
 }
 
-function Row({ icon: Icon, title, children }) {
+function Row({ icon: Icon, title, children, last = false }) {
   return (
-    <div className="flex items-start gap-3.5">
-      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-brand-50 text-brand-600">
-        <Icon size={19} />
+    <div className={`flex items-start gap-3.5 py-4 ${last ? '' : 'border-b-2 border-dashed border-ink/25'}`}>
+      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-[5px] border-2 border-ink bg-paper text-green">
+        <Icon size={18} />
       </span>
       <div className="text-[0.92rem] text-muted">
-        <strong className="mb-0.5 block font-display text-[0.95rem] text-ink-900">{title}</strong>
+        <strong className="mb-0.5 block font-mono text-[0.68rem] font-bold uppercase tracking-[0.1em] text-ink">
+          {title}
+        </strong>
         {children}
       </div>
     </div>
