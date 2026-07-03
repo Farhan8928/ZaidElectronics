@@ -43,7 +43,7 @@ export default function WhyUs() {
             <div className="aspect-[16/7] overflow-hidden border-b-2 border-ink">
               <img
                 src={SAVINGS.img}
-                alt="Technician repairing electronics at a workbench"
+                alt="Close-up of a technician repairing a television circuit board"
                 loading="lazy"
                 className="h-full w-full object-cover grayscale-[30%]"
               />

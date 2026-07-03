@@ -14,21 +14,21 @@ export const SERVICES = [
     desc: 'No power, no picture, half-dark screen or backlight failure — repaired at component level, same day in most cases.',
     points: ['Backlight & power faults', 'Motherboard repair'],
     img: '/images/led-tv-repair.jpg',
-    alt: 'LED television mounted on a brick wall',
+    alt: 'Technician repairing the board of an opened LED television',
   },
   {
     title: 'LCD TV Repair',
     desc: 'Inverter faults, T-CON issues, sound problems — older sets repaired honestly instead of being written off.',
     points: ['T-CON & inverter boards', 'Audio section repair'],
     img: '/images/lcd-tv-repair.jpg',
-    alt: 'Hand using a remote in front of a flat-screen TV',
+    alt: 'Technician repairing an opened flat-screen television on a workbench',
   },
   {
     title: 'Panel Repair & Bonding',
     desc: 'Lines on screen? Don’t pay ₹15,000 for a new panel. Our in-house COF/TAB bonding repairs it for up to 70% less.',
     points: ['COF / TAB bonding in-house', 'Save up to 70% vs replacement'],
     img: '/images/panel-repair-bonding.jpg',
-    alt: 'Television screen covered in coloured lines from a panel fault',
+    alt: 'Close-up of soldering work on a television circuit board',
     featured: true,
   },
   {
@@ -43,14 +43,14 @@ export const SERVICES = [
     desc: 'Technician at your home anywhere in Mumbai. Wall-mounted and big screens handled on the spot where possible.',
     points: ['Same-day home visits', 'Free pickup & drop'],
     img: '/images/doorstep-repair.jpg',
-    alt: 'Technician testing electronics with a multimeter',
+    alt: 'Technician repairing electronics with a soldering iron and multimeter',
   },
   {
     title: 'Buy & Sell TVs',
     desc: 'Fair cash price for your old or dead TV. Bench-tested refurbished sets available with warranty.',
     points: ['Instant old-TV quote', 'Refurbished with warranty'],
     img: '/images/buy-sell-tvs.jpg',
-    alt: 'Flat-screen TV on a media stand',
+    alt: 'Modern flat-screen TVs on display in a store',
   },
 ]
 
