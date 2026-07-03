@@ -11,7 +11,7 @@
 export const SERVICES = [
   {
     title: 'LED TV Repair',
-    desc: 'No power, no picture, half-dark screen or backlight failure — repaired at component level, same day in most cases.',
+    desc: 'No power, no picture, half-dark screen or backlight failure — diagnosed and repaired at component level.',
     points: ['Backlight & power faults', 'Motherboard repair'],
     img: '/images/led-tv-repair.jpg',
     alt: 'Technician repairing the board of an opened LED television',
@@ -41,7 +41,7 @@ export const SERVICES = [
   {
     title: 'Doorstep Repair',
     desc: 'Technician at your home anywhere in Mumbai. Wall-mounted and big screens handled on the spot where possible.',
-    points: ['Same-day home visits', 'Free pickup & drop'],
+    points: ['Doorstep home visits', 'Free pickup & drop'],
     img: '/images/doorstep-repair.jpg',
     alt: 'Technician repairing electronics with a soldering iron and multimeter',
   },
@@ -65,8 +65,8 @@ export const WHY_POINTS = [
     desc: 'Exact quote on WhatsApp before work begins. The price you approve is the price you pay.',
   },
   {
-    title: 'Same-day turnaround',
-    desc: 'Power, backlight and software faults usually go home the same evening.',
+    title: 'Fast, honest turnaround',
+    desc: 'Most common faults are a quick, straightforward fix — and you get a time estimate up front.',
   },
   {
     title: '25+ years of trust',
@@ -108,7 +108,7 @@ export const PROCESS = [
   },
   {
     step: '4',
-    title: 'Same-day repair & warranty',
+    title: 'Repair & warranty',
     desc: 'Bench-tested, delivered back, with a written 90-day warranty slip in your hand.',
   },
 ]

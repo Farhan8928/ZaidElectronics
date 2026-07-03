@@ -15,7 +15,7 @@ export const TESTIMONIALS = [
   {
     name: 'Shabana Shaikh',
     area: 'Kurla',
-    text: 'Checked the TV free, sent the exact price on WhatsApp, delivered the same evening. Honest and fast — exactly what you want.',
+    text: 'Checked the TV free, sent the exact price on WhatsApp, and delivered it back quickly. Honest and fast — exactly what you want.',
     rating: 5,
   },
   {

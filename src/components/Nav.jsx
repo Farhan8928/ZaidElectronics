@@ -47,7 +47,7 @@ export default function Nav() {
       {/* Utility strip */}
       <div className="border-b-2 border-ink bg-ink text-paper">
         <div className="container-x flex items-center justify-between py-1.5 font-mono text-[0.66rem] font-bold uppercase tracking-[0.12em]">
-          <span className="text-yellow">★ Free diagnosis · Same-day · 90-day warranty</span>
+          <span className="text-yellow">★ Free diagnosis · Doorstep service · 90-day warranty</span>
           <span className="hidden sm:block">{CONTACT.hours}</span>
         </div>
       </div>

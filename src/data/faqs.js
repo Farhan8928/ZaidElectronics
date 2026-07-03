@@ -21,7 +21,7 @@ export const FAQS = [
   },
   {
     q: 'How fast can you repair my TV?',
-    a: 'Power, backlight and software faults: usually the same day. Panel bonding: 1–3 days. You get a time estimate along with your quote.',
+    a: 'Power, backlight and software faults are usually quick to fix. Panel bonding takes 1–3 days. You get a time estimate along with your quote before any work starts.',
   },
   {
     q: 'Do you repair at home?',

@@ -51,7 +51,7 @@ export const NAV_LINKS = [
 export const HERO_POINTS = [
   'Free diagnosis — at the shop or your doorstep',
   'Fixed price approved by you before any work starts',
-  'Most repairs completed the same day',
+  'Honest timelines, quoted up front',
   '90-day written warranty on every repair',
 ]
 

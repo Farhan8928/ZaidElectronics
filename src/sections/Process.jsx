@@ -9,7 +9,7 @@ export default function Process() {
           num="03 / HOW IT WORKS"
           eyebrow="The process"
           title="From broken to fixed in 4 steps"
-          lead="Clear process, zero surprises. Most sets go home the same day."
+          lead="Clear process, zero surprises — you approve the price before any work starts."
         />
 
         <ol className="mt-12 grid list-none gap-6 sm:grid-cols-2 lg:grid-cols-4">

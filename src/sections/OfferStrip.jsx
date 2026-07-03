@@ -18,7 +18,7 @@ export default function OfferStrip() {
             Free doorstep diagnosis — book today.
           </h2>
           <p className="mt-2 font-mono text-[0.8rem] font-bold uppercase tracking-[0.04em] text-ink/70">
-            Call before 6 PM for a same-day visit anywhere in Mumbai
+            Call to book a free doorstep visit anywhere in Mumbai
           </p>
         </div>
         <div className="flex flex-wrap gap-3">

@@ -113,7 +113,7 @@ export default function Hero() {
             <br />
             TELE&shy;VISIONS<span className="text-green">.</span>
             <br />
-            <span className="mark">SAME DAY.</span>
+            <span className="mark">DONE RIGHT.</span>
           </motion.h1>
 
           <motion.p

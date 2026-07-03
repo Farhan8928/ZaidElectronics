@@ -10,7 +10,7 @@ export default function FinalCta() {
         <Reveal>
           <p className="label mb-5 justify-center text-white/70">[ READY WHEN YOU ARE ]</p>
           <h2 className="display-hero mx-auto max-w-[16ch] text-white">
-            Your TV, working by tonight.
+            Let&rsquo;s get your TV working again.
           </h2>
           <p className="mx-auto mt-5 max-w-[48ch] font-mono text-[0.82rem] font-bold uppercase tracking-[0.06em] text-white/80">
             Free diagnosis · Fixed price up front · 90-day written warranty
