@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+}
+
+body {
+  @apply bg-paper text-ink-900 font-sans antialiased;
+  overflow-x: clip;
+}
+
+::selection {
+  background: theme('colors.gold.DEFAULT');
+  color: theme('colors.ink.900');
+}
+
+@layer components {
+  /* Page gutter — one source of truth for horizontal rhythm. */
+  .container-x {
+    @apply mx-auto w-full max-w-[1200px] px-5 md:px-8;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-[800px] px-5 md:px-8;
+  }
+
+  /* Section label pill (e.g. "OUR SERVICES"). */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand-50 px-3.5 py-1.5
+           font-display text-xs font-extrabold uppercase tracking-[0.12em] text-brand-500;
+  }
+  .eyebrow--invert {
+    @apply bg-white/10 text-gold;
+  }
+
+  /* Fluid display headings — scale with viewport, no manual breakpoints. */
+  .display-xl {
+    @apply font-display font-extrabold tracking-[-0.02em];
+    font-size: clamp(1.9rem, 4vw, 2.7rem);
+    line-height: 1.1;
+  }
+  .display-hero {
+    @apply font-display font-extrabold tracking-[-0.02em];
+    font-size: clamp(2.3rem, 5.2vw, 3.7rem);
+    line-height: 1.08;
+  }
+
+  /* Buttons — one base, colour variants layered on top. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-transparent
+           px-6 py-3 font-display text-[0.92rem] font-bold transition-transform duration-200
+           hover:-translate-y-0.5 active:translate-y-0;
+  }
+  .btn-lg {
+    @apply px-7 py-4 text-base;
+  }
+  .btn-block {
+    @apply w-full;
+  }
+  .btn-primary {
+    @apply bg-gradient-to-b from-brand-500 to-brand-600 text-white shadow-cta
+           hover:from-brand-600 hover:to-brand-700;
+  }
+  .btn-wa {
+    @apply bg-gradient-to-b from-whatsapp to-whatsapp-deep text-white shadow-wa;
+  }
+  .btn-outline {
+    @apply border-line bg-white text-ink-900 shadow-card hover:border-brand-500 hover:text-brand-600;
+  }
+  .btn-white {
+    @apply bg-white text-brand-700 shadow-pop hover:bg-gold hover:text-ink-900;
+  }
+  .btn-ghost {
+    @apply border-white/40 bg-white/10 text-white hover:bg-white/20;
+  }
+
+  /* Surface card. */
+  .card {
+    @apply rounded-3xl border border-line bg-white shadow-card;
+  }
+
+  /* Small pill used for brand names / tags. */
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-paper px-3 py-1
+           text-[0.78rem] font-semibold text-muted;
+  }
+
+  /* Form input shared style. */
+  .field {
+    @apply w-full rounded-xl border-[1.5px] border-line bg-paper px-3.5 py-2.5 text-[0.92rem]
+           text-ink-900 transition placeholder:text-faint
+           focus:border-brand-500 focus:outline-none focus:ring-4 focus:ring-brand-500/20;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
