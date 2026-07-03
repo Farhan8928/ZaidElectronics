@@ -13,13 +13,18 @@ export const CONTACT = {
   phones: ['9821473182', '9326494446'],
   whatsapp: '919821473182',
   emails: ['asif6pr6@gmail.com', 'asif_itbuz@yahoo.co.in'],
-  addressLines: ['Shop No. 6, H-Sector, B-Line,', 'Mumbai — 400 088'],
-  address: 'Shop No. 6, H-Sector, B-Line, Mumbai — 400 088',
+  addressLines: [
+    'Shop No. 6, H-Sector, B-Line, Balaji Mandir Rd,',
+    'Opp. Saibaba Mandir, Near Madina Dairy, Dhobi Ghat,',
+    'Cheeta Camp, Trombay, Mumbai, Maharashtra 400088',
+  ],
+  address:
+    'Shop No. 6, H-Sector, B-Line, Balaji Mandir Rd, Opp. Saibaba Mandir, Near Madina Dairy, Dhobi Ghat, Cheeta Camp, Trombay, Mumbai, Maharashtra 400088',
   hours: 'Open 7 days · 10:00 am – 9:30 pm',
   mapEmbed:
-    'https://www.google.com/maps?q=Cheeta%20Camp%2C%20Trombay%2C%20Mumbai%20400088&output=embed',
+    'https://www.google.com/maps?q=Zaid+Electronics,+Balaji+Mandir+Rd,+Cheeta+Camp,+Trombay,+Mumbai,+Maharashtra+400088&output=embed',
   directions:
-    'https://www.google.com/maps/search/?api=1&query=Cheeta+Camp+Trombay+Mumbai+400088',
+    'https://www.google.com/maps/search/?api=1&query=Zaid+Electronics+Balaji+Mandir+Rd+Cheeta+Camp+Trombay+Mumbai+400088',
 }
 
 /**
