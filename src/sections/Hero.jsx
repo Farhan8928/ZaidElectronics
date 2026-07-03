@@ -48,7 +48,7 @@ function JobCardForm() {
         <span className="font-mono text-[0.66rem] font-bold text-ink/60">NO. 30-SEC</span>
       </div>
 
-      <form onSubmit={submit} className="grid gap-3.5 p-5">
+      <form onSubmit={submit} className="grid gap-3 p-4 md:p-5">
         <Field label="Your name">
           <input className="field" type="text" value={form.name} onChange={update('name')} placeholder="e.g. Rahul Sharma" required />
         </Field>
@@ -95,8 +95,8 @@ function Field({ label, children }) {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden border-b-2 border-ink pb-14 pt-32 md:pb-20 md:pt-36">
-      <div className="container-x grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
+    <section className="relative overflow-hidden border-b-2 border-ink pb-14 pt-28 md:pb-20 md:pt-32">
+      <div className="container-x grid items-start gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-14">
         <div>
           <motion.p
             variants={rise}

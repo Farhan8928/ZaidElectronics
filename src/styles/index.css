@@ -56,8 +56,8 @@ body::after {
   /* Fluid display headings in Space Grotesk. */
   .display-hero {
     @apply font-display font-bold uppercase;
-    font-size: clamp(2.6rem, 7.2vw, 5.6rem);
-    line-height: 0.92;
+    font-size: clamp(2.4rem, 6vw, 4.7rem);
+    line-height: 0.94;
     letter-spacing: -0.035em;
   }
   .display-xl {
@@ -121,7 +121,7 @@ body::after {
 
   /* Form input. */
   .field {
-    @apply w-full rounded-[5px] border-2 border-ink bg-white px-3.5 py-2.5 font-sans text-[0.92rem]
+    @apply w-full rounded-[5px] border-2 border-ink bg-white px-3.5 py-2 font-sans text-[0.92rem]
            text-ink transition placeholder:text-ink/40
            focus:outline-none focus:ring-4 focus:ring-yellow/70;
   }
