@@ -113,7 +113,7 @@ export default function Hero() {
             <br />
             TELE&shy;VISIONS<span className="text-green">.</span>
             <br />
-            <span className="mark">DONE RIGHT.</span>
+            <span className="mark">NOT REPLACED.</span>
           </motion.h1>
 
           <motion.p
