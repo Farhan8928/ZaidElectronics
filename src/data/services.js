@@ -28,7 +28,7 @@ export const SERVICES = [
     desc: 'Lines on screen? Don’t pay ₹15,000 for a new panel. Our in-house COF/TAB bonding repairs it for up to 70% less.',
     points: ['COF / TAB bonding in-house', 'Save up to 70% vs replacement'],
     img: '/images/panel-repair-bonding.jpg',
-    alt: 'Macro close-up of a television circuit board',
+    alt: 'Television screen covered in coloured lines from a panel fault',
     featured: true,
   },
   {
