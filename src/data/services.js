@@ -123,7 +123,7 @@ export const GUARANTEES = [
     desc: 'If we can’t repair your TV, the diagnosis costs you nothing. Zero risk to check.',
   },
   {
-    title: 'Genuine parts only',
-    desc: 'Tested components with warranty — never refurbished parts sold as new.',
+    title: 'Honest about parts',
+    desc: 'New or quality-tested refurbished — we tell you which, and every part carries the same warranty.',
   },
 ]
