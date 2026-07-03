@@ -69,8 +69,8 @@ export const WHY_POINTS = [
     desc: 'Power, backlight and software faults usually go home the same evening.',
   },
   {
-    title: '15+ years of trust',
-    desc: 'The same proprietor at the same counter since 2009. Your neighbours already know us.',
+    title: '25+ years of trust',
+    desc: 'The same proprietor at the same counter since 2000. Your neighbours already know us.',
   },
 ]
 

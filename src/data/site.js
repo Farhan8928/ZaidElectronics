@@ -9,7 +9,7 @@
 export const CONTACT = {
   name: 'Zaid Electronics',
   proprietor: 'Asif',
-  since: 2009,
+  since: 2000,
   phones: ['9821473182', '9326494446'],
   whatsapp: '919821473182',
   emails: ['asif6pr6@gmail.com', 'asif_itbuz@yahoo.co.in'],
@@ -36,7 +36,7 @@ export const RATING = {
   score: '4.9',
   count: '190+',
   repairs: '10,000+',
-  years: '15+',
+  years: '25+',
 }
 
 export const NAV_LINKS = [
