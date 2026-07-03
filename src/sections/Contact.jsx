@@ -19,7 +19,7 @@ export default function Contact() {
               <div className="grid gap-0 border-t-2 border-ink">
                 <Row icon={Phone} title="Call / WhatsApp">
                   {CONTACT.phones.map((p) => (
-                    <a key={p} href={`tel:+91${p}`} className="block hover:text-green">
+                    <a key={p} href={`tel:+91${p}`} className="block py-1 hover:text-green">
                       {fmtPhone(p)}
                     </a>
                   ))}
@@ -32,7 +32,7 @@ export default function Contact() {
                 </Row>
                 <Row icon={Mail} title="Email" last>
                   {CONTACT.emails.map((e) => (
-                    <a key={e} href={`mailto:${e}`} className="block hover:text-green">
+                    <a key={e} href={`mailto:${e}`} className="block py-1 hover:text-green">
                       {e}
                     </a>
                   ))}

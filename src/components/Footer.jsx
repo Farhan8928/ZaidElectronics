@@ -33,17 +33,17 @@ export default function Footer() {
 
         <FooterCol title="Reach us">
           <FooterMeta icon={Phone}>
-            <a href={`tel:+91${CONTACT.phones[0]}`} className="hover:text-yellow">
+            <a href={`tel:+91${CONTACT.phones[0]}`} className="inline-block py-1 hover:text-yellow">
               {fmtPhone(CONTACT.phones[0])}
             </a>
           </FooterMeta>
           <FooterMeta icon={Phone}>
-            <a href={`tel:+91${CONTACT.phones[1]}`} className="hover:text-yellow">
+            <a href={`tel:+91${CONTACT.phones[1]}`} className="inline-block py-1 hover:text-yellow">
               {fmtPhone(CONTACT.phones[1])}
             </a>
           </FooterMeta>
           <FooterMeta icon={Mail}>
-            <a href={`mailto:${CONTACT.emails[0]}`} className="hover:text-yellow">
+            <a href={`mailto:${CONTACT.emails[0]}`} className="inline-block py-1 hover:text-yellow">
               {CONTACT.emails[0]}
             </a>
           </FooterMeta>
@@ -69,8 +69,8 @@ export default function Footer() {
 
 function FooterCol({ title, children }) {
   return (
-    <div className="flex flex-col gap-2.5">
-      <h4 className="mb-1 font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-yellow">
+    <div className="flex flex-col gap-1">
+      <h4 className="mb-1.5 font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-yellow">
         {title}
       </h4>
       {children}
@@ -80,7 +80,7 @@ function FooterCol({ title, children }) {
 
 function FooterLink({ href, children }) {
   return (
-    <a href={href} className="w-fit text-[0.9rem] text-paper/65 hover:text-yellow">
+    <a href={href} className="w-fit py-1.5 text-[0.9rem] text-paper/65 hover:text-yellow">
       {children}
     </a>
   )
@@ -88,8 +88,8 @@ function FooterLink({ href, children }) {
 
 function FooterMeta({ icon: Icon, children }) {
   return (
-    <p className="flex items-start gap-2 text-[0.88rem] text-paper/65">
-      <Icon size={15} className="mt-0.5 shrink-0 text-yellow" />
+    <p className="flex items-start gap-2 py-1 text-[0.88rem] text-paper/65">
+      <Icon size={15} className="mt-1 shrink-0 text-yellow" />
       <span>{children}</span>
     </p>
   )
