@@ -11,7 +11,7 @@ export default function Contact() {
           eyebrow="Find us"
           title={
             <>
-              Opposite Sai Baba Mandir, <em>since {CONTACT.since}</em>
+              Visit the workshop, <em>since {CONTACT.since}</em>
             </>
           }
           invert
@@ -48,7 +48,7 @@ export default function Contact() {
               </div>
               <div className="visit__block">
                 <p className="visit__label">Serving</p>
-                <p>Trombay · Cheeta Camp · Chembur · Govandi · Mankhurd</p>
+                <p>All across Mumbai — doorstep visits &amp; free pickup</p>
               </div>
             </div>
 
@@ -77,7 +77,7 @@ export default function Contact() {
 
           <Reveal delay={0.12} className="visit__map">
             <iframe
-              title="Zaid Electronics location — Cheeta Camp, Trombay, Mumbai"
+              title="Zaid Electronics location — Mumbai"
               src={CONTACT.mapEmbed}
               loading="lazy"
               allowFullScreen

@@ -10,7 +10,7 @@ export default function Footer() {
             solution &amp; bonding, selling &amp; buying.
           </p>
           <p className="footer__prop">
-            Prop. {CONTACT.proprietor} · Trombay, Mumbai · since {CONTACT.since}
+            Prop. {CONTACT.proprietor} · Mumbai · since {CONTACT.since}
           </p>
         </div>
 

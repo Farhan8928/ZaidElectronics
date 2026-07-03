@@ -18,7 +18,7 @@ export default function Navbar() {
     <header className={`nav ${scrolled ? 'nav--scrolled' : ''}`}>
       <div className="nav__strip">
         <div className="container nav__strip-inner">
-          <span>Opp. Sai Baba Mandir, Cheeta Camp, Trombay</span>
+          <span>Mumbai, India</span>
           <span className="nav__strip-hours">{CONTACT.hours}</span>
           <a href={`tel:+91${CONTACT.phones[0]}`}>
             Call +91 {CONTACT.phones[0].replace(/(\d{5})(\d{5})/, '$1 $2')}
@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className="container nav__inner">
         <a href="#top" className="nav__brand" aria-label="Zaid Electronics home">
           Zaid Electronics<span className="nav__brand-star">*</span>
-          <small>TV &amp; panel repair workshop — Trombay, Mumbai</small>
+          <small>TV &amp; panel repair workshop — Mumbai</small>
         </a>
 
         <nav className="nav__links" aria-label="Primary">

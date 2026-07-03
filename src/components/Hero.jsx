@@ -16,7 +16,7 @@ export default function Hero() {
     <section className="hero" id="top">
       <div className="container">
         <motion.p variants={rise} initial="hidden" animate="show" custom={0} className="hero__kicker">
-          A repair workshop, not a replacement counter — serving Trombay since {CONTACT.since}
+          A repair workshop, not a replacement counter — serving Mumbai since {CONTACT.since}
         </motion.p>
 
         <h1 className="hero__title">

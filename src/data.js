@@ -162,7 +162,7 @@ export const TESTIMONIALS = [
   },
   {
     name: 'Farhan Qureshi',
-    area: 'Govandi',
+    area: 'Sion',
     text: 'Sold my dead TV to them at a fair price and bought a refurbished 32-inch with warranty. Both deals were clean.',
     rating: 5,
   },
