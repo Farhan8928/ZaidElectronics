@@ -28,15 +28,13 @@ export const CONTACT = {
 }
 
 /**
- * Headline trust metrics.
- *
- * NOTE: `score` and `count` are placeholders — replace with the shop's real
- * Google rating and review count before launch so the social proof stays
- * honest.
+ * Headline trust metrics — kept in sync with the shop's real Google Business
+ * listing (4.9★, 190 reviews) so the social proof matches what customers see
+ * on the embedded map.
  */
 export const RATING = {
-  score: '4.8',
-  count: '1,200+',
+  score: '4.9',
+  count: '190+',
   repairs: '10,000+',
   years: '15+',
 }
