@@ -21,14 +21,14 @@ export const SERVICES = [
     desc: 'Inverter faults, T-CON issues, sound problems — older sets repaired honestly instead of being written off.',
     points: ['T-CON & inverter boards', 'Audio section repair'],
     img: '/images/lcd-tv-repair.jpg',
-    alt: 'Technician repairing an opened flat-screen television on a workbench',
+    alt: 'Close-up of soldering repair on a television board',
   },
   {
     title: 'Panel Repair & Bonding',
     desc: 'Lines on screen? Don’t pay ₹15,000 for a new panel. Our in-house COF/TAB bonding repairs it for up to 70% less.',
     points: ['COF / TAB bonding in-house', 'Save up to 70% vs replacement'],
     img: '/images/panel-repair-bonding.jpg',
-    alt: 'Close-up of soldering work on a television circuit board',
+    alt: 'Technician repairing the panel of an opened flat-screen television',
     featured: true,
   },
   {
@@ -50,7 +50,7 @@ export const SERVICES = [
     desc: 'Fair cash price for your old or dead TV. Bench-tested refurbished sets available with warranty.',
     points: ['Instant old-TV quote', 'Refurbished with warranty'],
     img: '/images/buy-sell-tvs.jpg',
-    alt: 'Modern flat-screen TVs on display in a store',
+    alt: 'A modern flat-screen smart TV on display',
   },
 ]
 
