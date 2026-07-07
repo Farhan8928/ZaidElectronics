@@ -5,5 +5,5 @@
 export const LIVE_RATING = {
   score: 4.9,
   count: 194,
-  fetchedAt: '2026-07-07T17:11:33.024Z',
+  fetchedAt: '2026-07-07T17:24:30.290Z',
 }

@@ -47,14 +47,23 @@ Vercel → Project → Settings → **Environment Variables** (all environments)
 Redeploy once. The build log should show:
 `fetch-rating: live Google rating 4.9★ · 193 reviews (shown as "190+")`
 
-### Step 4 — Turn on the daily rebuild
+### Step 4 — Turn on the daily rebuild (100% inside Vercel, zero maintenance)
+The repo ships a Vercel Cron (`vercel.json` → calls `/api/redeploy` daily
+~09:00 IST), which POSTs your Deploy Hook to start a fresh build. Wire it up:
+
 1. Vercel → Project → Settings → Git → **Deploy Hooks** → Create
    (name: `daily-rating`, branch: `main`) → copy the URL.
-2. GitHub repo → Settings → Secrets and variables → Actions →
-   **New repository secret**: `VERCEL_DEPLOY_HOOK_URL` = that URL.
+2. Vercel → Settings → **Environment Variables** → add:
+   - `VERCEL_DEPLOY_HOOK_URL` = that URL
+   - `CRON_SECRET` = any long random text (e.g. 30 random letters) — Vercel
+     sends this automatically with cron calls so strangers can't trigger
+     builds by visiting the URL.
+3. Push/redeploy once so the cron registers. Verify: Vercel → Project →
+   Settings → **Cron Jobs** should list `/api/redeploy · 30 3 * * *`.
 
-Done. Every day at 09:00 IST the site rebuilds with the live numbers.
-(You can also trigger it manually: GitHub → Actions → "Daily redeploy" → Run.)
+Done — no GitHub setup, nothing expires, nothing to click. (We deliberately
+avoided GitHub Actions scheduling: GitHub disables cron workflows after 60
+days without commits, which would silently kill the refresh.)
 
 ---
 
