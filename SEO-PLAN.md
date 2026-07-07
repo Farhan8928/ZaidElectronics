@@ -9,6 +9,10 @@ There are two halves: (A) what's already built into the website, and (B) the
 off-site work you (or I) still need to do. Local ranking is ~50% Google Business
 Profile + reviews, so **Section B matters as much as the site.**
 
+> 🎯 **Chasing a specific number?** See **[CALLS-PLAYBOOK.md](CALLS-PLAYBOOK.md)**
+> — the step-by-step operating manual to reach **2+ calls/day from Google**,
+> with funnel math, copy-paste review/WhatsApp/GBP assets, and a weekly scorecard.
+
 ---
 
 ## A. Done on the website ✅

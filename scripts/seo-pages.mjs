@@ -12,7 +12,7 @@ export const SERVICE_PAGES = [
   {
     slug: 'led-tv-repair-mumbai',
     keyword: 'LED TV repair in Mumbai',
-    metaTitle: 'LED TV Repair in Mumbai — Backlight, Power & Panel | Zaid Electronics',
+    metaTitle: 'LED TV Repair in Mumbai — Backlight & Power | Zaid Electronics',
     metaDescription:
       'LED TV repair in Mumbai — backlight, power & board faults fixed at component level. Free diagnosis, doorstep service, 90-day warranty. Call 98214 73182.',
     h1: 'LED TV Repair in Mumbai',
@@ -27,7 +27,7 @@ export const SERVICE_PAGES = [
   {
     slug: 'lcd-tv-repair-mumbai',
     keyword: 'LCD TV repair in Mumbai',
-    metaTitle: 'LCD TV Repair in Mumbai — T-CON, Inverter & Sound | Zaid Electronics',
+    metaTitle: 'LCD TV Repair in Mumbai — T-CON & Inverter | Zaid Electronics',
     metaDescription:
       'LCD TV repair in Mumbai — T-CON, inverter, backlight & audio faults repaired honestly, not written off. Free diagnosis, 90-day warranty. Call 98214 73182.',
     h1: 'LCD TV Repair in Mumbai',
@@ -101,7 +101,7 @@ export const AREA_PAGES = [
   ...a,
   kind: 'area',
   keyword: `TV repair in ${a.area}`,
-  metaTitle: `TV Repair in ${a.area}, Mumbai — LED, LCD & Panel | Zaid Electronics`,
+  metaTitle: `TV Repair in ${a.area} — LED, LCD, Panel | Zaid Electronics`,
   metaDescription: `TV repair in ${a.area}, Mumbai — LED, LCD, Smart TV & panel bonding, all brands. Free diagnosis, doorstep service, 90-day warranty. 4.9★. Call 98214 73182.`,
   h1: `TV Repair in ${a.area}`,
   eyebrow: `TV Repair · ${a.area}, Mumbai`,

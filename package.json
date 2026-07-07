@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/generate-pages.mjs && node scripts/prerender.mjs",
+    "build": "vite build && node scripts/generate-pages.mjs && node scripts/prerender.mjs && node scripts/final-seo-audit.mjs",
     "build:fast": "vite build",
     "preview": "vite preview",
-    "audit": "node scripts/responsive-audit.mjs"
+    "audit": "node scripts/responsive-audit.mjs",
+    "seo-audit": "node scripts/final-seo-audit.mjs"
   },
   "dependencies": {
     "framer-motion": "11.11.17",
