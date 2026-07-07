@@ -12,7 +12,7 @@
 // Behaviour without the env vars: prints a note and exits 0 — the committed
 // fallback values in src/data/rating.gen.js are used. Never breaks a build.
 
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -79,16 +79,19 @@ export const LIVE_RATING = {
   //    Generic patterns so this works no matter what the previous values were.
   const patch = (rel) => {
     const p = join(ROOT, rel)
+    if (!existsSync(p)) return
     let t = readFileSync(p, 'utf8')
     const before = t
     t = t.replace(/"ratingValue":\s*"\d\.\d"/g, `"ratingValue": "${score}"`)
     t = t.replace(/"reviewCount":\s*"\d+"/g, `"reviewCount": "${userRatingCount}"`)
     t = t.replace(/\d\.\d★/g, `${score}★`)
-    t = t.replace(/\b\d{2,5}\+ (reviews|customers)/g, `${rounded}+ $1`)
+    t = t.replace(/\d\.\d\/5/g, `${score}/5`)
+    t = t.replace(/\b\d{2,5}\+ (Google reviews|reviews on Google|reviews|customers)/g, `${rounded}+ $1`)
     if (t !== before) { writeFileSync(p, t); console.log(`fetch-rating: patched ${rel}`) }
   }
   patch('index.html')
   patch('public/llms.txt')
+  patch('scripts/.prerendered-root.html') // CI prerender snapshot (committed)
 
   console.log(`fetch-rating: live Google rating ${score}★ · ${userRatingCount} reviews (shown as "${rounded}+")`)
 } catch (err) {
