@@ -70,7 +70,7 @@ export const WHY_POINTS = [
   },
   {
     title: '25+ years of trust',
-    desc: 'The same proprietor at the same counter since 2000. Your neighbours already know us.',
+    desc: 'The same proprietor since 2000, with a full team covering all of Mumbai — Western, Central and Harbour line.',
   },
 ]
 

@@ -87,7 +87,10 @@ export const SERVICE_PAGES = [
 ]
 
 // Nearby localities/landmarks give each area page genuinely different copy.
+// Coverage: Harbour line (home turf), Central line and Western line — the shop
+// does doorstep visits across all of Mumbai.
 export const AREA_PAGES = [
+  // Harbour line / east belt (home turf)
   { slug: 'tv-repair-cheeta-camp', area: 'Cheeta Camp', near: 'Cheeta Camp, Trombay — our own neighbourhood, opposite Sai Baba Mandir on Balaji Mandir Road' },
   { slug: 'tv-repair-trombay', area: 'Trombay', near: 'Trombay, including Cheeta Camp, the BARC belt and Mahul Road' },
   { slug: 'tv-repair-chembur', area: 'Chembur', near: 'Chembur — Diamond Garden, RC Marg, Chembur station and Chembur East' },
@@ -97,6 +100,23 @@ export const AREA_PAGES = [
   { slug: 'tv-repair-sion', area: 'Sion', near: 'Sion — Sion-Koliwada, Pratiksha Nagar and Sion station' },
   { slug: 'tv-repair-wadala', area: 'Wadala', near: 'Wadala — Wadala East, Antop Hill and the Wadala truck terminal area' },
   { slug: 'tv-repair-ghatkopar', area: 'Ghatkopar', near: 'Ghatkopar — Pant Nagar, Ghatkopar East and Rajawadi' },
+  // Central line
+  { slug: 'tv-repair-dadar', area: 'Dadar', near: 'Dadar East & West — Shivaji Park, Hindmata and Dadar TT' },
+  { slug: 'tv-repair-vikhroli', area: 'Vikhroli', near: 'Vikhroli East & West — Kannamwar Nagar and the Godrej belt on LBS Marg' },
+  { slug: 'tv-repair-bhandup', area: 'Bhandup', near: 'Bhandup East & West — LBS Marg, Dreams Mall area and Usha Nagar' },
+  { slug: 'tv-repair-mulund', area: 'Mulund', near: 'Mulund East & West — LBS Marg, Sarvodaya Nagar and the check naka belt' },
+  { slug: 'tv-repair-powai', area: 'Powai', near: 'Powai — Hiranandani Gardens, the IIT Bombay area and Chandivali' },
+  { slug: 'tv-repair-thane', area: 'Thane', near: 'Thane West & East — Naupada, Wagle Estate and Ghodbunder Road' },
+  // Western line
+  { slug: 'tv-repair-lower-parel', area: 'Lower Parel', near: 'Lower Parel & Parel — the Phoenix Mills belt, Currey Road and Prabhadevi' },
+  { slug: 'tv-repair-bandra', area: 'Bandra', near: 'Bandra East & West — Linking Road, Hill Road, Bandstand and Kherwadi' },
+  { slug: 'tv-repair-santacruz', area: 'Santacruz', near: 'Santacruz East & West — Vakola, Kalina and the SV Road stretch' },
+  { slug: 'tv-repair-andheri', area: 'Andheri', near: 'Andheri East & West — Marol, Chakala, JB Nagar, Lokhandwala and Veera Desai Road' },
+  { slug: 'tv-repair-goregaon', area: 'Goregaon', near: 'Goregaon East & West — Aarey Road, Motilal Nagar and the Oberoi Mall belt' },
+  { slug: 'tv-repair-malad', area: 'Malad', near: 'Malad East & West — Mindspace, Marve Road and Kurar Village' },
+  { slug: 'tv-repair-kandivali', area: 'Kandivali', near: 'Kandivali East & West — Thakur Village, Charkop and Poisar' },
+  { slug: 'tv-repair-borivali', area: 'Borivali', near: 'Borivali East & West — IC Colony, Shimpoli and the National Park side' },
+  { slug: 'tv-repair-navi-mumbai', area: 'Navi Mumbai', near: 'Navi Mumbai — Vashi, Nerul, Koparkhairane and Sanpada' },
 ].map((a) => ({
   ...a,
   kind: 'area',

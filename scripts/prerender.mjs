@@ -36,7 +36,35 @@ const server = http.createServer(async (req, res) => {
 await new Promise((r) => server.listen(0, r))
 const port = server.address().port
 
-const browser = await chromium.launch()
+/**
+ * Launch Chromium, self-healing for CI (Vercel's build image ships without
+ * Playwright browsers): on a missing-executable error we install Chromium
+ * once and retry. If a browser is genuinely impossible (very locked-down CI),
+ * we skip prerendering with a loud warning instead of failing the deploy —
+ * the site still works, it just hydrates client-side only.
+ */
+async function launchBrowser() {
+  try {
+    return await chromium.launch()
+  } catch (err) {
+    console.log('prerender: chromium not found, installing (one-time, ~30s)…')
+    try {
+      const { execSync } = await import('node:child_process')
+      execSync('npx playwright install chromium', { stdio: 'inherit' })
+      return await chromium.launch()
+    } catch (err2) {
+      console.warn('prerender: SKIPPED — no browser available in this environment.')
+      console.warn('           Homepage will render client-side only. Reason:', err2.message.split('\n')[0])
+      return null
+    }
+  }
+}
+
+const browser = await launchBrowser()
+if (!browser) {
+  server.close()
+  process.exit(0)
+}
 const page = await browser.newPage({ viewport: { width: 1280, height: 900 } })
 await page.goto(`http://localhost:${port}/`, { waitUntil: 'networkidle' })
 

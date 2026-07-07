@@ -13,8 +13,8 @@ export default function Footer() {
             selling — serving Mumbai with honest, expert repairs since {CONTACT.since}.
           </p>
           <p className="mt-4 max-w-[36ch] text-[0.78rem] leading-relaxed text-paper/45">
-            <span className="text-paper/70">Areas we serve:</span> Trombay · Cheeta Camp ·
-            Chembur · Govandi · Mankhurd · Sion · Kurla &amp; all of Mumbai
+            <span className="text-paper/70">Areas we serve:</span> all of Mumbai — Western
+            line, Central line &amp; Harbour line, plus Thane &amp; Navi Mumbai.
           </p>
         </div>
 

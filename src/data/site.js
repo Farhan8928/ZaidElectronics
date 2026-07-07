@@ -84,6 +84,7 @@ export const SERVICE_LINKS = [
 ]
 
 export const AREA_LINKS = [
+  // Harbour line / east belt
   { label: 'Chembur', href: '/tv-repair-chembur/' },
   { label: 'Govandi', href: '/tv-repair-govandi/' },
   { label: 'Mankhurd', href: '/tv-repair-mankhurd/' },
@@ -93,6 +94,23 @@ export const AREA_LINKS = [
   { label: 'Sion', href: '/tv-repair-sion/' },
   { label: 'Wadala', href: '/tv-repair-wadala/' },
   { label: 'Ghatkopar', href: '/tv-repair-ghatkopar/' },
+  // Central line
+  { label: 'Dadar', href: '/tv-repair-dadar/' },
+  { label: 'Vikhroli', href: '/tv-repair-vikhroli/' },
+  { label: 'Bhandup', href: '/tv-repair-bhandup/' },
+  { label: 'Mulund', href: '/tv-repair-mulund/' },
+  { label: 'Powai', href: '/tv-repair-powai/' },
+  { label: 'Thane', href: '/tv-repair-thane/' },
+  // Western line
+  { label: 'Lower Parel', href: '/tv-repair-lower-parel/' },
+  { label: 'Bandra', href: '/tv-repair-bandra/' },
+  { label: 'Santacruz', href: '/tv-repair-santacruz/' },
+  { label: 'Andheri', href: '/tv-repair-andheri/' },
+  { label: 'Goregaon', href: '/tv-repair-goregaon/' },
+  { label: 'Malad', href: '/tv-repair-malad/' },
+  { label: 'Kandivali', href: '/tv-repair-kandivali/' },
+  { label: 'Borivali', href: '/tv-repair-borivali/' },
+  { label: 'Navi Mumbai', href: '/tv-repair-navi-mumbai/' },
 ]
 
 /** Format a bare 10-digit number as a readable +91 phone string. */

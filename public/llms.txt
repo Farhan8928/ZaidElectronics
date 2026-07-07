@@ -1,7 +1,8 @@
 # Zaid Electronics — TV Repair in Mumbai
 
 > Zaid Electronics is a TV repair workshop in Cheeta Camp, Trombay, Mumbai,
-> run by proprietor Asif since 2000. It repairs LED, LCD, Smart and Android
+> run by proprietor Asif since 2000, serving all of Mumbai with doorstep
+> visits. It repairs LED, LCD, Smart and Android
 > TVs of all brands at component level, and specialises in panel repair &
 > bonding (COF/TAB) — fixing screen lines instead of replacing the whole
 > panel, for up to 70% less. Free diagnosis, fixed prices agreed up front,
@@ -26,8 +27,11 @@
 ## Brands repaired
 Samsung, LG, Sony, Mi (Xiaomi), OnePlus, TCL, Panasonic, Videocon, Onida, BPL, Haier, VU, Sansui, Realme — LED, LCD, Smart, Android, 4K and QLED.
 
-## Areas served
-Trombay, Cheeta Camp, Chembur, Govandi, Mankhurd, Kurla, Sion, Wadala, Ghatkopar and all of Mumbai.
+## Areas served (all of Mumbai — doorstep service)
+- Harbour line / east: Trombay, Cheeta Camp, Chembur, Govandi, Mankhurd, Kurla, Sion, Wadala, Ghatkopar
+- Central line: Dadar, Vikhroli, Bhandup, Mulund, Powai, Thane
+- Western line: Lower Parel, Bandra, Santacruz, Andheri, Goregaon, Malad, Kandivali, Borivali
+- Plus Navi Mumbai (Vashi, Nerul, Koparkhairane, Sanpada)
 
 ## Also known as (multilingual)
 TV repair wala, TV theek karne wala, LED TV repair wala, टीवी रिपेयर मुंबई,
