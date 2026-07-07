@@ -60,7 +60,6 @@ try {
   }
 
   const score = rating.toFixed(1)
-  const rounded = Math.max(10, Math.floor(userRatingCount / 10) * 10)
 
   // 1) the generated module (feeds React components + landing-page generator)
   writeFileSync(join(ROOT, 'src/data/rating.gen.js'),
@@ -86,14 +85,14 @@ export const LIVE_RATING = {
     t = t.replace(/"reviewCount":\s*"\d+"/g, `"reviewCount": "${userRatingCount}"`)
     t = t.replace(/\d\.\d★/g, `${score}★`)
     t = t.replace(/\d\.\d\/5/g, `${score}/5`)
-    t = t.replace(/\b\d{2,5}\+ (Google reviews|reviews on Google|reviews|customers)/g, `${rounded}+ $1`)
+    t = t.replace(/\b\d{2,5}\+? (Google reviews|reviews on Google|reviews|customers)/g, `${userRatingCount} $1`)
     if (t !== before) { writeFileSync(p, t); console.log(`fetch-rating: patched ${rel}`) }
   }
   patch('index.html')
   patch('public/llms.txt')
   patch('scripts/.prerendered-root.html') // CI prerender snapshot (committed)
 
-  console.log(`fetch-rating: live Google rating ${score}★ · ${userRatingCount} reviews (shown as "${rounded}+")`)
+  console.log(`fetch-rating: live Google rating ${score}★ · ${userRatingCount} reviews`)
 } catch (err) {
   console.warn('fetch-rating: FAILED — keeping previous values. Reason:', err.message)
   process.exit(0) // never break the build over a rating refresh

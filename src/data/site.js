@@ -32,12 +32,12 @@ import { LIVE_RATING } from './rating.gen.js'
 /**
  * Headline trust metrics — score/count come from rating.gen.js, which
  * scripts/fetch-rating.mjs refreshes from the live Google Business listing
- * on every Vercel build (daily redeploy keeps it current). The count is
- * floored to the nearest 10 for the "190+" style; countExact feeds schema.
+ * on every Vercel build (daily redeploy keeps it current). The exact count
+ * is shown everywhere so it always matches the Google map widget.
  */
 export const RATING = {
   score: LIVE_RATING.score.toFixed(1),
-  count: `${Math.max(10, Math.floor(LIVE_RATING.count / 10) * 10)}+`,
+  count: String(LIVE_RATING.count),
   countExact: String(LIVE_RATING.count),
   repairs: '10,000+',
   years: '25+',
