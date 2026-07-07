@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate-pages.mjs && node scripts/prerender.mjs",
+    "build:fast": "vite build",
     "preview": "vite preview",
     "audit": "node scripts/responsive-audit.mjs"
   },

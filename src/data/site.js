@@ -70,6 +70,31 @@ export const BRANDS = [
   'VU',
 ]
 
+/**
+ * Links to the generated SEO landing pages (scripts/seo-pages.mjs). Rendered in
+ * the footer so the homepage passes link equity to them and they're crawlable
+ * — keep these slugs in sync with scripts/seo-pages.mjs.
+ */
+export const SERVICE_LINKS = [
+  { label: 'LED TV Repair in Mumbai', href: '/led-tv-repair-mumbai/' },
+  { label: 'LCD TV Repair in Mumbai', href: '/lcd-tv-repair-mumbai/' },
+  { label: 'Panel Repair & Bonding', href: '/tv-panel-repair-bonding-mumbai/' },
+  { label: 'Smart & Android TV Repair', href: '/smart-tv-repair-mumbai/' },
+  { label: 'Doorstep TV Repair', href: '/doorstep-tv-repair-mumbai/' },
+]
+
+export const AREA_LINKS = [
+  { label: 'Chembur', href: '/tv-repair-chembur/' },
+  { label: 'Govandi', href: '/tv-repair-govandi/' },
+  { label: 'Mankhurd', href: '/tv-repair-mankhurd/' },
+  { label: 'Trombay', href: '/tv-repair-trombay/' },
+  { label: 'Kurla', href: '/tv-repair-kurla/' },
+  { label: 'Cheeta Camp', href: '/tv-repair-cheeta-camp/' },
+  { label: 'Sion', href: '/tv-repair-sion/' },
+  { label: 'Wadala', href: '/tv-repair-wadala/' },
+  { label: 'Ghatkopar', href: '/tv-repair-ghatkopar/' },
+]
+
 /** Format a bare 10-digit number as a readable +91 phone string. */
 export const fmtPhone = (p) => `+91 ${p.replace(/(\d{5})(\d{5})/, '$1 $2')}`
 

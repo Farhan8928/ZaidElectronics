@@ -1,7 +1,6 @@
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { Brand } from './Nav.jsx'
-import { CONTACT, NAV_LINKS, fmtPhone } from '../data/site.js'
-import { SERVICES } from '../data/services.js'
+import { CONTACT, NAV_LINKS, SERVICE_LINKS, AREA_LINKS, fmtPhone } from '../data/site.js'
 
 export default function Footer() {
   return (
@@ -12,6 +11,10 @@ export default function Footer() {
           <p className="mt-4 max-w-[34ch] text-[0.9rem] text-paper/60">
             LED &amp; LCD TV repair, panel repair &amp; bonding, smart-TV service, buying &amp;
             selling — serving Mumbai with honest, expert repairs since {CONTACT.since}.
+          </p>
+          <p className="mt-4 max-w-[36ch] text-[0.78rem] leading-relaxed text-paper/45">
+            <span className="text-paper/70">Areas we serve:</span> Trombay · Cheeta Camp ·
+            Chembur · Govandi · Mankhurd · Sion · Kurla &amp; all of Mumbai
           </p>
         </div>
 
@@ -24,9 +27,9 @@ export default function Footer() {
         </FooterCol>
 
         <FooterCol title="Services">
-          {SERVICES.map((s) => (
-            <FooterLink key={s.title} href="#services">
-              {s.title}
+          {SERVICE_LINKS.map((l) => (
+            <FooterLink key={l.href} href={l.href}>
+              {l.label}
             </FooterLink>
           ))}
         </FooterCol>
@@ -50,6 +53,26 @@ export default function Footer() {
           <FooterMeta icon={MapPin}>{CONTACT.address}</FooterMeta>
           <FooterMeta icon={Clock}>{CONTACT.hours}</FooterMeta>
         </FooterCol>
+      </div>
+
+      {/* TV repair by area — internal links to the local landing pages */}
+      <div className="border-t-2 border-paper/15">
+        <div className="container-x py-6">
+          <h4 className="mb-3 font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-yellow">
+            TV Repair by area in Mumbai
+          </h4>
+          <nav className="flex flex-wrap gap-x-4 gap-y-2" aria-label="TV repair areas">
+            {AREA_LINKS.map((l) => (
+              <a
+                key={l.href}
+                href={l.href}
+                className="py-1 text-[0.85rem] text-paper/65 hover:text-yellow"
+              >
+                TV Repair in {l.label}
+              </a>
+            ))}
+          </nav>
+        </div>
       </div>
 
       {/* Oversized wordmark strip */}

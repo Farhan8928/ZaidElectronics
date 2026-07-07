@@ -1,0 +1,32 @@
+# Zaid Electronics — TV Repair Mumbai
+# Allow all traditional search crawlers
+User-agent: *
+Allow: /
+
+# Explicitly welcome AI / answer-engine crawlers (GEO / AEO) so ChatGPT,
+# Perplexity, Google AI Overviews, Gemini etc. can read and cite the business.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://zaidelectronicsmumbai.com/sitemap.xml
