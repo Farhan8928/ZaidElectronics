@@ -162,7 +162,7 @@ export default function Hero() {
                   <Star key={i} size={14} className="fill-yellow" />
                 ))}
               </span>
-              {RATING.score}/5 · {RATING.count} customers
+              {RATING.score}/5 · {RATING.count} Google reviews
             </span>
             {HERO_POINTS.slice(0, 2).map((p) => (
               <span key={p} className="inline-flex items-center gap-1.5 font-mono text-[0.72rem] text-muted">

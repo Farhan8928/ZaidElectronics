@@ -36,7 +36,7 @@ const businessLd = {
   priceRange: '₹₹',
   address: addressLd,
   geo: { '@type': 'GeoCoordinates', latitude: 19.0426, longitude: 72.9065 },
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: RATING.score, reviewCount: '190', bestRating: '5' },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: RATING.score, reviewCount: RATING.countExact, bestRating: '5' },
   openingHoursSpecification: [{
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],

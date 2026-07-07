@@ -1,7 +1,7 @@
 import { BRANDS, RATING } from '../data/site.js'
 
 const STATS = [
-  { value: RATING.score, suffix: '★', label: 'Customer rating' },
+  { value: RATING.score, suffix: '★', label: 'Google rating' },
   { value: RATING.repairs, label: 'TVs repaired' },
   { value: RATING.years, label: 'Years at the bench' },
   { value: '90d', label: 'Written warranty' },

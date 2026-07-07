@@ -27,14 +27,18 @@ export const CONTACT = {
     'https://www.google.com/maps/search/?api=1&query=Zaid+Electronics+Balaji+Mandir+Rd+Cheeta+Camp+Trombay+Mumbai+400088',
 }
 
+import { LIVE_RATING } from './rating.gen.js'
+
 /**
- * Headline trust metrics — kept in sync with the shop's real Google Business
- * listing (4.9★, 190 reviews) so the social proof matches what customers see
- * on the embedded map.
+ * Headline trust metrics — score/count come from rating.gen.js, which
+ * scripts/fetch-rating.mjs refreshes from the live Google Business listing
+ * on every Vercel build (daily redeploy keeps it current). The count is
+ * floored to the nearest 10 for the "190+" style; countExact feeds schema.
  */
 export const RATING = {
-  score: '4.9',
-  count: '190+',
+  score: LIVE_RATING.score.toFixed(1),
+  count: `${Math.max(10, Math.floor(LIVE_RATING.count / 10) * 10)}+`,
+  countExact: String(LIVE_RATING.count),
   repairs: '10,000+',
   years: '25+',
 }

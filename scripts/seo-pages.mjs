@@ -8,6 +8,8 @@
 // `aeoAnswer` is the 40–60 word direct answer placed right under the H1 — this
 // is what Google AI Overviews / ChatGPT / voice assistants lift as the answer.
 
+import { RATING } from '../src/data/site.js'
+
 export const SERVICE_PAGES = [
   {
     slug: 'led-tv-repair-mumbai',
@@ -125,7 +127,7 @@ export const AREA_PAGES = [
   metaDescription: `TV repair in ${a.area}, Mumbai — LED, LCD, Smart TV & panel bonding, all brands. Free diagnosis, doorstep service, 90-day warranty. 4.9★. Call 98214 73182.`,
   h1: `TV Repair in ${a.area}`,
   eyebrow: `TV Repair · ${a.area}, Mumbai`,
-  aeoAnswer: `Zaid Electronics repairs LED, LCD and Smart TVs and does in-house panel bonding for customers in ${a.area}, Mumbai. Free diagnosis, a fixed price agreed before work, doorstep visits with free pickup and drop, and a 90-day written warranty. Rated 4.9★ by 190+ customers. Call +91 98214 73182.`,
+  aeoAnswer: `Zaid Electronics repairs LED, LCD and Smart TVs and does in-house panel bonding for customers in ${a.area}, Mumbai. Free diagnosis, a fixed price agreed before work, doorstep visits with free pickup and drop, and a 90-day written warranty. Rated ${RATING.score}★ by ${RATING.count} customers. Call +91 98214 73182.`,
   intro: [
     `Need a TV repaired in ${a.area}? Zaid Electronics serves ${a.near}. We fix LED, LCD, Smart and Android TVs of every brand — from no-power and backlight faults to screen lines and software issues — and specialise in panel repair &amp; bonding that saves you buying a new panel.`,
     `Book a doorstep visit in ${a.area} or bring your set to our nearby Cheeta Camp workshop. Diagnosis is always free and you approve the price before any work starts.`,

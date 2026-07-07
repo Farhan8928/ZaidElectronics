@@ -31,7 +31,7 @@ export default function Testimonials() {
               <div>
                 <Stars n={5} />
                 <span className="mt-1 block font-mono text-[0.66rem] uppercase tracking-[0.06em] text-muted">
-                  {RATING.count} reviews
+                  {RATING.count} reviews on Google
                 </span>
               </div>
             </div>
