@@ -59,7 +59,10 @@ The repo ships a Vercel Cron (`vercel.json` → calls `/api/redeploy` daily
      sends this automatically with cron calls so strangers can't trigger
      builds by visiting the URL.
 3. Push/redeploy once so the cron registers. Verify: Vercel → Project →
-   Settings → **Cron Jobs** should list `/api/redeploy · 30 3 * * *`.
+   Settings → **Cron Jobs** should list `/api/redeploy/ · 30 3 * * *`.
+   (The trailing slash matters: the site uses `trailingSlash: true`, and
+   Vercel's cron scheduler does not follow redirects — registering the
+   non-slash path means the scheduler gets a 308 and the job never runs.)
 
 Done — no GitHub setup, nothing expires, nothing to click. (We deliberately
 avoided GitHub Actions scheduling: GitHub disables cron workflows after 60

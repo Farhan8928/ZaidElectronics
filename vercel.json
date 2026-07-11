@@ -7,7 +7,7 @@
 
   "crons": [
     {
-      "path": "/api/redeploy",
+      "path": "/api/redeploy/",
       "schedule": "30 3 * * *"
     }
   ],
